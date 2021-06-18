@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/style.css">
-    <title>Главная</title>
+    <title>Главная1</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -12,7 +12,9 @@
     * {
       box-sizing: border-box;
     }
-    html {
+    /* html {
+    } */
+    body {
       background: white;
     }
     nav {
@@ -21,7 +23,8 @@
       left: 0;
       right: 0;
       top: 0;
-      height: 97px;
+      /* height: 97px; */
+      height: 100%;
     }
     a {
       font-size: 18px;
@@ -53,9 +56,11 @@
 /* TOOLS */
     .model {
       position: absolute;
-      height: 100vh;
+      /* height: 100vh; */
+      height: 2618px;
       width: 100%;
       opacity: .3;
+      z-index: -10;
     }
     .affichage {
       /* display: none; */
@@ -73,7 +78,27 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      height: 100%;
+      overflow: hidden;
+      /* height: 100%; */
+      /* height: 1270px; */
+      height: 2540px;
+    }
+    .section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .section-row {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+    }
+    .navigation {
+      height: 16%;
     }
     .menu {
       position: relative;
@@ -99,6 +124,7 @@
     #logo {
       background-image: url('images/logoblanc.png');
     }
+
     .box {
       position: relative;
       display: block;
@@ -106,12 +132,8 @@
       border: 1px solid white;
       border-radius: 10px;
     }
-    .bggraph1 {
-      position: absolute;
-      display: block;
-      background: rgba(81, 89, 255, 1);
-      border-radius: 10px;
-      height: 517px;
+    .box1 {
+      height: 80%;
       width: 100%;
     }
     /* #a {
@@ -123,46 +145,169 @@
       display: block;
       width: 100%;
     }
-    .next {
+
+    .box2 {
       width: 100%;
-      flex: 1 32px;
+      height: 5%;
+    }
+    .box3 {
+      width: 100%;
+      height: 97px;
+    }
+    .box4 {
+      width: 100%;
+      height: 58px;
+    }
+    .box5 {
+      width: 100%;
+      height: 32px;
+    }
+    .s3 {
+      /* top: 1270px; */
+      height: 635px;
+      width: 100%;
+      /* overflow: hidden; */
+      z-index: -1;
+    }
+    .rond {
+      display: block;
+      position: absolute;
+      height: 80vh;
+      width: 80vh;
+      border-radius: 50%;
+    }
+    .red {
+      background: red;
+    }
+    .yel {
+      background: yellow;
+    }
+    .blue {
+      background: blue;
+    }
+    .cards {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 635px;
+      width: 100%;
+    }
+    .card {
+      height: 97px;
+      width: 914px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, .3);
+      border: 1px solid white;
+    }
+    .half {
+      display: inline-block !important;
+      position: relative;
+      width: 50%;
+    }
+    .box6 {
+      width: 100%;
+      height: 127px;
+    }
+    .box7 {
+      width: 100%;
+      height: 381px;
+    }
+    .box8 {
+      width: 50%;
+      height: 127px;
+      /* display: inline-block !important; */
+    }
+    .footer {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 78px;
     }
     </style>
   </head>
 
   <body>
-    <img src="images/bgglavnaya1.jpg" alt="bgmyviewportmodel" class="affichage model">
+    <img src="images/glav.jpg" alt="bgmyviewportmodel" class="affichage model">
 
     <div class="glav">
 
-      <div>
-        <nav>
-          <div class="menu">
-            <a href="#"><i class="icon-glav" id="logo"></i></a>
-            <a href="#">Контакт</a>
-            <a href="#">Путешествовать</a>
-            <a href="#">О вокзале</a>
-            <a href="#">Искусство</a>
-            <a href="#">Магазин</a>
+      <div class="section">
+        <div class="navigation">
+          <nav>
+            <div class="menu">
+              <a href="#"><i class="icon-glav" id="logo"></i></a>
+              <a href="#">Контакт</a>
+              <a href="#">Путешествовать</a>
+              <a href="#">О вокзале</a>
+              <a href="#">Искусство</a>
+              <a href="#">Магазин</a>
+            </div>
+          </nav>
           </div>
-        </nav>
-        </div>
-
-        <!-- <div>
-          <div class="bggraph1"></div>
-          <img src="images/graphismglav1.png" alt="graphism" class="img1">
-        </div> -->
-
-
-        <div>
-          <!-- <div class="box" id="a"></div> -->
-          <div class="bggraph1"></div>
-          <img src="images/graphismglav1.png" alt="graphism" class="img1">
-        </div>
-
-        <div class="box next"></div>
-
+          <div class="box box1">
+            <img src="images/graphismglav1.png" alt="graphism" class="img1">
+          </div>
+          <div class="box box2"></div>
       </div>
+
+      <div class="section">
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+        <div class="box box5"></div>
+      </div>
+
+      <div class="section s3">
+        <div class="rond blue" style="top: -30vh; left: 50vw;"></div>
+        <div class="rond red" style="top: 30vh; left: 40vw;"></div>
+        <div class="rond red" style="top: -30vh; left: 10vw;"></div>
+        <div class="rond yel" style="top: -45vh; left: 85vw;"></div>
+        <div class="rond yel" style="top: -5vh; left: -20vw;"></div>
+        <div class="rond blue" style="top: 10vh; left: 15vw;"></div>
+        <div class="rond blue" style="top: 50vh; left: 70vw;"></div>
+        <div class="rond red" style="top: 70vh; left: 7vw;"></div>
+        <div class="cards">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+      </div>
+
+      <div class="section-row">
+        <div class="half">
+          <div class="box box6"></div>
+          <div class="box box7"></div>
+          <div class="box box8"></div>
+          <div class="box box8"></div>
+        </div>
+        <div class="half">
+          <div class="box box6"></div>
+          <div class="box box7"></div>
+          <div class="box box6"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer box">
+
+    </div>
 
 
 
