@@ -53,12 +53,14 @@ p {
 .model {
   position: absolute;
   /* height: 100vh; */
-  height: 2618px;
   width: 100%;
-  opacity: .5;
-  z-index: 1000;
+  opacity: .8;
   top: 0;
   left: 0;
+}
+.myviewport-glav {
+  height: 2604px;
+  z-index: 1000;
 }
 .affichage-on {
   display: block;
@@ -74,14 +76,14 @@ p {
 }
 /* TOOLS */
 
-.glav {
+.pageglav {
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   /* height: 100%; */
   /* height: 1270px; */
   height: 2540px;
+  overflow: hidden;
 }
 .section {
   position: relative;
@@ -99,7 +101,7 @@ p {
   flex-direction: row;
 }
 .navigation {
-  height: 16%;
+  height: 95px;
 }
 .menu {
   position: relative;
@@ -209,6 +211,10 @@ p {
   width: 100%;
   /* overflow: hidden; */
   z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .rond {
   display: block;
@@ -231,8 +237,8 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  height: 635px;
+  justify-content: space-between;
+  height: 477px;
   width: 100%;
 }
 .row {
@@ -282,5 +288,5 @@ p {
   display: block;
   position: relative;
   width: 100%;
-  height: 78px;
+  height: 64px;
 }
