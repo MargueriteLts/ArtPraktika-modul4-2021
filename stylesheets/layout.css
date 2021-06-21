@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+}
+/* html {
+} */
+body {
+  background: white;
+}
+nav {
+  display: block;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  /* height: 97px; */
+  height: 100%;
+}
+a {
+  font-size: 18px;
+  /* line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -.022em; */
+  font-family: 'Gotham Pro', sans-serif;
+  font-weight: lighter;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex: 1 183px;
+  border-radius: 10px;
+  background: rgba(81, 89, 255, 1);
+  border: 1px solid white;
+  cursor: pointer;
+}
+a:nth-of-type(1) {
+  flex: 2 366px;
+}
+a:hover {
+  color: rgba(81, 89, 255, 1);
+  background: white;
+  border: 2px solid rgba(81, 89, 255, 1);
+}
+p {
+  font-family: 'Gotham Pro', sans-serif;
+  color: white;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+/* TOOLS */
+.model {
+  position: absolute;
+  /* height: 100vh; */
+  height: 2618px;
+  width: 100%;
+  opacity: .5;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+.affichage-on {
+  display: block;
+}
+.affichage-off {
+  display: none;
+}
+.positionabs {
+  position: absolute;
+}
+.positionrel {
+  position: relative;
+}
+/* TOOLS */
+
+.glav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* height: 100%; */
+  /* height: 1270px; */
+  height: 2540px;
+}
+.section {
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+}
+.section-row {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.navigation {
+  height: 16%;
+}
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.icon-glav {
+  width: 281px;
+  height: 72px;
+  /* display: block; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: 0 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+#logo {
+  background-image: url('../images/logoblanc.png');
+}
+
+.box {
+  position: relative;
+  display: block;
+  /* display: inline-block; */
+  background: rgba(81, 89, 255, 1);
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.box-b {
+  position: relative;
+  display: inline-block;
+  background: white;
+  border: 2px solid rgba(81, 89, 255, 1);
+  border-radius: 10px;
+}
+.box1 {
+  height: 80%;
+  width: 100%;
+}
+/* #a {
+  height: 517px;
+  width: 100%;
+} */
+.img1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.box2 {
+  width: 100%;
+  height: 5%;
+}
+.title {
+  width: 100%;
+  height: 127px;
+  display: flex;
+  flex-direction: row;
+}
+.box3 {
+  width: 60%;
+  height: 127px;
+  /* padding: 10px; */
+}
+.box4 {
+  width: 20%;
+  height: 127px;
+}
+.box5 {
+  width: 100%;
+  height: 60px;
+  /* display: inline-block; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.smalbox {
+  height: 100%;
+  width: 16%;
+}
+.date {
+  margin-top: 20px;
+  margin-left: 40%;
+}
+.vremia {
+  margin-top: 20px;
+  margin-left: 35%;
+}
+.inf {
+  margin-top: 20px;
+  margin-left: 55%;
+}
+.box6 {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.s3 {
+  /* top: 1270px; */
+  height: 635px;
+  width: 100%;
+  /* overflow: hidden; */
+  z-index: -1;
+}
+.rond {
+  display: block;
+  position: absolute;
+  height: 88vh;
+  width: 88vh;
+  border-radius: 50%;
+}
+.red {
+  background: red;
+}
+.yel {
+  background: yellow;
+}
+.blue {
+  background: blue;
+}
+.cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 635px;
+  width: 100%;
+}
+.row {
+  height: 97px;
+  width: 71vw;
+  display: flex;
+}
+.card1 {
+  width: 66%;
+  height: 100%;
+}
+.card {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .6);
+  border: 1px solid white;
+  padding-left: 40px;
+  padding-top: 38px;
+  backdrop-filter: blur(8px);
+}
+.box7 {
+  width: 34%;
+  height: 100%;
+}
+.half {
+  /* display: inline-block !important; */
+  /* display: block !important; */
+  position: relative;
+  width: 50%;
+}
+.box8 {
+  width: 100%;
+  height: 127px;
+}
+.box9 {
+  width: 100%;
+  height: 381px;
+}
+.cadre {
+  display: flex;
+  height: 127px;
+}
+.box10 {
+  width: 50%;
+  height: 100%;
+}
+.footer {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 78px;
+}
