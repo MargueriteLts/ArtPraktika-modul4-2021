@@ -2,9 +2,27 @@
   box-sizing: border-box;
 }
 /* html {
+  scrollbar-width: none
 } */
+/* NOT SUPPORTED IN FIREFOX START */
+/* ::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track-piece {
+  background: rgba(81, 89, 255, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: #4C53E7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+/* NOT SUPPORTED IN FIREFOX END*/
+
+
 body {
   background: white;
+  /* overflow: hidden; */
 }
 nav {
   display: block;
@@ -14,6 +32,7 @@ nav {
   top: 0;
   /* height: 97px; */
   height: 100%;
+  width: 100%;
 }
 a {
   font-size: 18px;
@@ -36,6 +55,7 @@ a {
 }
 a:nth-of-type(1) {
   flex: 2 366px;
+  /* width: 366px; */
 }
 a:hover {
   color: rgba(81, 89, 255, 1);
@@ -48,6 +68,20 @@ p {
   font-weight: normal;
   font-size: 20px;
 }
+button {
+  font-family: 'Gotham Pro', sans-serif;
+  color: white;
+  font-weight: normal;
+  font-size: 22px;
+  cursor: pointer;
+  background-color: #5159FF;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+button:active {
+  background-color: #4C53E7;
+  transform: translateY(2px);
+}
 
 /* TOOLS */
 .model {
@@ -57,6 +91,7 @@ p {
   opacity: .8;
   top: 0;
   left: 0;
+  pointer-events: none;
 }
 .myviewport-glav {
   height: 2604px;
@@ -75,7 +110,6 @@ p {
   position: relative;
 }
 /* TOOLS */
-
 .pageglav {
   position: relative;
   display: flex;
@@ -102,6 +136,7 @@ p {
 }
 .navigation {
   height: 95px;
+  z-index: 100;
 }
 .menu {
   position: relative;
@@ -124,14 +159,21 @@ p {
 #logo {
   background-image: url('../images/logoblanc.png');
 }
-
+.no-click {
+  pointer-events: none;
+}
+.cursor {
+  cursor: pointer;
+}
 .box {
   position: relative;
-  display: block;
+  /* display: block; */
   /* display: inline-block; */
   background: rgba(81, 89, 255, 1);
   border: 1px solid white;
   border-radius: 10px;
+  color: white;
+  font-family: 'Gotham Pro', sans-serif;
 }
 .box-b {
   position: relative;
@@ -139,6 +181,8 @@ p {
   background: white;
   border: 2px solid rgba(81, 89, 255, 1);
   border-radius: 10px;
+  color: rgba(81, 89, 255, 1);
+  font-family: 'Gotham Pro', sans-serif;
 }
 .box1 {
   height: 80%;
@@ -170,9 +214,23 @@ p {
   height: 127px;
   /* padding: 10px; */
 }
-.box4 {
+.box4-a {
   width: 20%;
   height: 127px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.box4-b {
+  width: 20%;
+  height: 127px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.depart {
+  height: 508px;
+  width: 100%;
 }
 .box5 {
   width: 100%;
@@ -210,13 +268,13 @@ p {
   height: 635px;
   width: 100%;
   /* overflow: hidden; */
-  z-index: -1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .rond {
+  z-index: -1;
   display: block;
   position: absolute;
   height: 88vh;
@@ -289,4 +347,16 @@ p {
   position: relative;
   width: 100%;
   height: 64px;
+}
+.bg-grad {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.h635 {
+  height: 635px;
+}
+.gradient {
+  width: 150vw;
 }
