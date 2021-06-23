@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/slick.css"/>
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/slick-theme.css"/>
+    <title>Искусство</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <style media="screen">
+      .myviewport-art {
+        height: 699px;
+        width: 100%;
+        z-index: 1000;
+      }
+      .pageart {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 635px;
+        overflow: hidden;
+      }
+      .mask {
+        width: 100%;
+        height: 85%;
+        z-index: 2000;
+        pointer-events: none;
+        /* display: none; */
+      }
+      .container {
+        position: absolute;
+        /* height: 540px; */
+        height: 85%;
+        width: 100%;
+        top: 95px;
+        left: 0;
+      }
+      .slider {
+        top: 10px;
+        display: flex;
+      }
+      .plakat1 {
+        width: 343px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="images/firefox-art.jpg" alt="bgmyviewportmodel" class="affichage-off model myviewport-art">
+    <div class="pageart">
+      <div class="navigation">
+        <nav>
+          <div class="menu">
+            <a href="index.html"><i class="icon-glav" id="logo"></i></a>
+            <a href="kontakt.html">Контакты</a>
+            <a href="voyage.html">Путешествовать</a>
+            <a href="ovokzale.html">О вокзале</a>
+            <a href="art.html">Искусство</a>
+            <a href="shop.html">Магазин</a>
+          </div>
+        </nav>
+      </div>
+      <!-- CAROUSEL START -->
+      <img src="images/mask.png" alt="" class="mask">
+      <!-- CAROUSEL FINISH-->
+      <!-- <div class="box box0">
+        <img src="images/graphismart.png" alt="graphism" class="graph-art">
+      </div> -->
+    </div>
+    <div class="container">
+      <div class="slider center">
+        <div><img src="images/plakat1.jpg" alt="" class="plakat1"></div>
+        <div><img src="images/plakat2.jpg" alt="" class="plakat1"></div>
+        <div><img src="images/plakat3.jpg" alt="" class="plakat1"></div>
+        <div><img src="images/plakat4.jpg" alt="" class="plakat1"></div>
+        <div><img src="images/plakat5.jpg" alt="" class="plakat1"></div>
+        <div><img src="images/plakat6.jpg" alt="" class="plakat1"></div>
+        <div><img src="images/plakat7.jpg" alt="" class="plakat1"></div>
+        <div><img src="images/plakat8.jpg" alt="" class="plakat1"></div>
+        <div><img src="images/plakat9.jpg" alt="" class="plakat1"></div>
+        <div><img src="images/plakat10.jpg" alt="" class="plakat1"></div>
+        <div><img src="images/plakat11.jpg" alt="" class="plakat1"></div>
+        <div><img src="images/plakat12.jpg" alt="" class="plakat1"></div>
+      </div>
+    </div>
+    <div class="footer box">
+      <img src="images/iconsfooter.png" alt="" style="display: block; position: absolute; right: 2%; top: 33%; left: auto;">
+    </div>
+
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+
+
+    <script type="text/javascript">
+      $('.center').slick({
+      centerMode: true,
+      centerPadding: '10px',
+      slidesToShow: 3,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  </script>
+
+  </body>
+</html>
