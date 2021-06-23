@@ -7,6 +7,47 @@
     <title>Главная</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style media="screen">
+      .gifob {
+        position: absolute;
+        left: 26%;
+        top: 26%;
+      }
+    </style>
+    <script>
+    $(document).ready(function(){
+
+      $(".box4-b").click(function(){
+        if ($(".box4-b").hasClass("box-b")) {
+          $(".box4-b").toggleClass("box-b");
+          $(".box4-b").toggleClass("box");
+          $(".box4-b").toggleClass("no-click");
+          $(".box4-b").toggleClass("cursor");
+          $(".box4-a").toggleClass("box");
+          $(".box4-a").toggleClass("box-b");
+          $(".box4-a").toggleClass("no-click");
+          $(".box4-a").toggleClass("cursor");
+          $(".departs").toggleClass("affichage-off");
+          $(".arrivees").toggleClass("affichage-off");
+        }
+      })
+
+      $(".box4-a").click(function(){
+        if ($(".box4-a").hasClass("box-b")) {
+          $(".box4-a").toggleClass("box-b");
+          $(".box4-a").toggleClass("box");
+          $(".box4-a").toggleClass("no-click");
+          $(".box4-a").toggleClass("cursor");
+          $(".box4-b").toggleClass("box");
+          $(".box4-b").toggleClass("box-b");
+          $(".box4-b").toggleClass("no-click");
+          $(".box4-b").toggleClass("cursor");
+          $(".arrivees").toggleClass("affichage-off");
+          $(".departs").toggleClass("affichage-off");
+        }
+      })
+    });
+    </script>
   </head>
 
   <body>
@@ -29,6 +70,7 @@
           </div>
           <div class="box box1">
             <img src="images/graphismglav1.png" alt="graphism" class="img1">
+            <img src="images/gifoblakovos.gif" alt="" class="gifob">
           </div>
           <div class="box box2"></div>
       </div>
@@ -39,38 +81,49 @@
             <img src="images/raspisanie67px.png" alt=""
             style="height: 47px; margin-top: 35px; margin-left: 50px; background-position: 0 0; background-size: 100% auto; background-repeat: no-repeat;">
           </div>
-          <div class="box box4"></div>
-          <div class="box-b box4"></div>
+          <div class="box box4-a no-click">Отправления</div>
+          <div class="box-b box4-b cursor">Прибытия</div>
         </div>
-        <div class="box box5">
-          <div class="smalbox"><p class="date">Дата</p></div>
-          <div class="smalbox"><p class="vremia">Время</p></div>
-          <div class="smalbox"><p class="vremia">Поезда</p></div>
-          <div class="smalbox"><p class="date">Направление</p></div>
-          <div class="smalbox"><p class="inf">Инфо</p></div>
-          <div class="smalbox"><p class="date">Платформа</p></div>
-
-          <!-- <p>Время</p>
-          <p>Поезда</p>
-          <p>Направление</p>
-          <p>Инфо</p>
-          <p>Платформа</p> -->
+          <div class="box box5">
+            <div class="smalbox"><p class="date">Дата</p></div>
+            <div class="smalbox"><p class="vremia">Время</p></div>
+            <div class="smalbox"><p class="vremia">Поезда</p></div>
+            <div class="smalbox"><p class="date">Направление</p></div>
+            <div class="smalbox"><p class="inf">Инфо</p></div>
+            <div class="smalbox"><p class="date">Платформа</p></div>
+          </div>
+        <div class="departs">
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+          <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
         </div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
-        <div class="box box6"><p>23.06.21</p><p>12:34</p><p>KLRT456LM</p><p>МОСКВА</p><p>Вовремя</p><p>№6</p></div>
+        <div class="arrivees affichage-off">
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+          <div class="box box6"><p>23.06.21</p><p>18:07</p><p>AGNZ721BG</p><p>ПАРИЖ</p><p>Вовремя</p><p>№4</p></div>
+        </div>
       </div>
 
       <div class="section s3">
@@ -85,7 +138,8 @@
         <div class="cards">
           <div class="row">
             <div class="card1 card"><p>Адрес : улица Облаков  55</p></div>
-            <div class="box box7"></div>
+            <button type="button" name="button" class="box box7">Смотреть на карте</button>
+            <!-- <div class="box box7"></div> -->
           </div>
           <div class="row card"><p>Электронная почта : olabkovos@cloud.com</p></div>
           <div class="row card"><p>Номер телефона: 8 999 777 6655</p></div>
@@ -118,6 +172,21 @@
     </div>
 
 
+    <!-- <script>
+    $(document).ready(function(){
+
+      $(".box4").click(function(){
+        if ($(".box4").hasClass("box")) {
+          $(".box4").removeClass("box");
+          $(".box4").addClass("box-b");
+        }
+        if ($(".box4").hasClass("box-b")) {
+          $(".box4").removeClass("box-b");
+          $(".box4").addClass("box");
+        }
+      });
+    });
+    </script> -->
 
   </body>
 </html>
