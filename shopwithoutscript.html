@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Магазин</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style media="screen">
+      .myviewport-shop {
+        height: 699px;
+        width: 100%;
+        z-index: 1000;
+      }
+      .pageshop {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 635px;
+        overflow: hidden;
+      }
+      .h445 {
+        height: 445px;
+        position: absolute;
+        left: 0;
+        top: 95px;
+        z-index: -10;
+      }
+      .section-shop {
+        height: 70%;
+        display: flex;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+      }
+      #drag, #spin {
+        position: relative;
+        display: flex;
+        margin: auto;
+        transform-style: preserve-3d;
+        transform: rotateX(-10deg);
+      }
+      #drag img {
+        transform-style: preserve-3d;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 200px;
+        text-align: center;
+        box-shadow: 0 0 8px #fff;
+        -webkit-box-reflect: below 10px linear-gradient (transparent, transparent, #0005);
+      }
+      #drag img:hover{
+        box-shadow: 0 0 15px #fffd;
+        -webkit-box-reflect: below 10px linear-gradient (transparent, transparent, #0007);
+      }
+      #ground {
+        width: 900px;
+        height: 900px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateX(90deg);
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+      @keyframes spinRevert {
+        from {
+          transform: rotateY(360deg);
+        }
+        to {
+          transform: rotateY(0deg);
+        }
+      }
+
+      .cloud-merch {
+        height: 387px;
+      }
+      .section-row-shop {
+        position: relative;
+        width: 100%;
+        height: 95px;
+        display: flex;
+        flex-direction: row;
+      }
+      .box27 {
+        height: 100%;
+        width: 366px;
+      }
+      .box28 {
+        height: 100%;
+        flex: 1 182px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="images/firefox-shop.jpg" alt="bgmyviewportmodel" class="affichage-off model myviewport-shop">
+    <div class="pageshop">
+      <div class="navigation">
+        <nav>
+          <div class="menu">
+            <a href="index.html"><i class="icon-glav" id="logo"></i></a>
+            <a href="kontakt.html">Контакты</a>
+            <a href="voyage.html">Путешествовать</a>
+            <a href="ovokzale.html">О вокзале</a>
+            <a href="art.html">Искусство</a>
+            <a href="shop.html">Магазин</a>
+          </div>
+        </nav>
+      </div>
+      <div class="bg-grad h445">
+        <img src="images/gradient.png" alt="" class="gradient">
+      </div>
+      <div class="section-shop">
+        <div id="drag">
+          <div id="spin">
+            <img src="images/cloud.svg" alt="" class="cloud-merch">
+            <img src="images/cloud.svg" alt="" class="cloud-merch">
+            <img src="images/cloud.svg" alt="" class="cloud-merch">
+            <img src="images/cloud.svg" alt="" class="cloud-merch">
+            <img src="images/cloud.svg" alt="" class="cloud-merch">
+            <img src="images/cloud.svg" alt="" class="cloud-merch">
+            <img src="images/cloud.svg" alt="" class="cloud-merch">
+          </div>
+          <div id="ground"></div>
+        </div>
+      </div>
+      <div class="section-row-shop">
+        <div class="box box27"></div>
+        <div class="box box28"></div>
+        <div class="box box28"></div>
+        <div class="box box28"></div>
+        <div class="box box27"></div>
+      </div>
+
+    </div>
+    <div class="footer box">
+      <img src="images/iconsfooter.png" alt="" style="display: block; position: absolute; right: 2%; top: 33%; left: auto;">
+    </div>
+
+
+  </body>
+</html>
