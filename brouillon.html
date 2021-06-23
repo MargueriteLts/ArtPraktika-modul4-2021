@@ -5,6 +5,33 @@
     <title></title>
   </head>
   <style media="screen">
+  /* NOT SUPPORTED IN FIREFOX START */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    /* background: rgba(81, 89, 255, 0.1); */
+    /* background-color: transparent; */
+    /* opacity: 0.3; */
+  }
+
+  /* Track */
+  /* ::-webkit-scrollbar-track {
+  } */
+
+  ::-webkit-scrollbar-track-piece {
+    background: rgba(81, 89, 255, 0.1);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #4C53E7;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  /* NOT SUPPORTED IN FIREFOX END*/
     ul {
       list-style-type: none;
       margin: 0;
@@ -56,6 +83,9 @@
       <li><a href="#">art</a></li>
       <li><a href="#">mag</a></li>
     </ul>
+
+
+
 
   </body>
 
