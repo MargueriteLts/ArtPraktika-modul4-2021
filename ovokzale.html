@@ -20,24 +20,222 @@
         height: 2540px;
         overflow: hidden;
       }
+      .section-row-vokzal1 {
+        position: relative;
+        width: 100%;
+        height: 127px;
+        display: flex;
+        flex-direction: row;
+      }
+      .section-row-vokzal2 {
+        position: relative;
+        width: 100%;
+        height: 413px;
+        display: flex;
+        flex-direction: row;
+      }
+      .box14 {
+        height: 100%;
+        width: 183px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .etaji {
+        height: 100%;
+        width: 549px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .etaj {
+        height: 64px;
+        flex: 1 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box15 {
+        height: 100%;
+        width: 548px;
+      }
+      .box16 {
+        height: 100%;
+        width: 731px;
+      }
+      .razdeli {
+        height: 100%;
+        width: 548px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .razdel {
+        flex: 1 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box17 {
+        width: 100%;
+        height: 127px;
+      }
+      .box18 {
+        width: 100%;
+        height: 508px;
+      }
+      .row-vokzal {
+        width: 100%;
+        height: 508px;
+        display: flex;
+      }
+      .box19 {
+        height: 100%;
+        width: 183px;
+      }
+      .box20 {
+        height: 100%;
+        width: 914px;
+      }
+      .half-wrap {
+        position: relative;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box21 {
+        height: 95px;
+        width: 100%;
+      }
+      .box22 {
+        height: 318px;
+        width: 57%;
+      }
+      .colonne {
+        display: flex;
+        flex-direction: column;
+        width: 274px;
+        height: 318px;
+      }
+      .box23 {
+        height: 30%;
+        width: 100%;
+      }
+      .box24 {
+        height: 70%;
+        width: 100%;
+      }
+      .half-colonne {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+      .box25 {
+        height: 64px;
+        width: 100%;
+      }
+      .box26 {
+        height: 63px;
+        width: 100%;
+      }
     </style>
+    <script>
+    $(document).ready(function(){
+
+      $("#etaj1").click(function(){
+        if ($("#etaj1").hasClass("box-b")) {
+          $("#etaj1").toggleClass("box-b");
+          $("#etaj1").toggleClass("box");
+          // $("#etaj1").addClass("ok");
+          // $(".etaj.box").addClass("box-b");
+          // $(".etaj.box").removeClass("box");
+          // $(".box14.box").addClass("box-b");
+          // $(".box14.box").removeClass("box");
+        }
+      })
+    });
+    </script>
   </head>
 
   <body>
-    <img src="images/firefox-ovokzale.jpg" alt="bgmyviewportmodel" class="affichage-on model myviewport-ovokzale">
+    <img src="images/firefox-ovokzale.jpg" alt="bgmyviewportmodel" class="affichage-off model myviewport-ovokzale">
+
     <div class="pagevokzal">
 
-      <div class="navigation">
-        <nav>
-          <div class="menu">
-            <a href="index.html"><i class="icon-glav" id="logo"></i></a>
-            <a href="kontakt.html">Контакты</a>
-            <a href="voyage.html">Путешествовать</a>
-            <a href="ovokzale.html">О вокзале</a>
-            <a href="art.html">Искусство</a>
-            <a href="shop.html">Магазин</a>
+      <div class="section">
+        <div class="navigation">
+          <nav>
+            <div class="menu">
+              <a href="index.html"><i class="icon-glav" id="logo"></i></a>
+              <a href="kontakt.html">Контакты</a>
+              <a href="voyage.html">Путешествовать</a>
+              <a href="ovokzale.html">О вокзале</a>
+              <a href="art.html">Искусство</a>
+              <a href="shop.html">Магазин</a>
+            </div>
+          </nav>
+        </div>
+        <div class="section-row-vokzal1">
+          <div class="box box14">Зал</div>
+          <div class="etaji">
+            <div class="box-b etaj" id="etaj1">1 этаж</div>
+            <div class="box-b etaj" id="etaj2">2 этаж</div>
+            <div class="box-b etaj" id="etaj3">3 этаж</div>
+            <div class="box-b etaj" id="etaj4">4 этаж</div>
+            <div class="box-b etaj" id="etaj5">5 этаж</div>
+            <div class="box-b etaj" id="etaj6">6 этаж</div>
           </div>
-        </nav>
+          <div class="box box15"></div>
+        </div>
+        <div class="section-row-vokzal2">
+          <div class="box box16"></div>
+          <div class="razdeli">
+            <div class="box razdel"><img src="images/icon-entrance.svg" alt="" style="width: 64px; height: 64px;"></div>
+            <div class="box razdel"><img src="images/icon-exit.svg" alt="" style="width: 64px; height: 64px;"></div>
+            <div class="box razdel"><img src="images/icon-info.svg" alt="" style="width: 64px; height: 64px;"></div>
+            <div class="box razdel"><img src="images/icon-departs.svg" alt="" style="width: 64px; height: 64px;"></div>
+            <div class="box razdel"><img src="images/icon-arrivees.svg" alt="" style="width: 64px; height: 64px;"></div>
+            <div class="box razdel"><img src="images/icon-toilet.svg" alt="" style="width: 64px; height: 64px;"></div>
+            <div class="box razdel"><img src="images/icon-wait.svg" alt="" style="width: 64px; height: 64px;"></div>
+            <div class="box razdel"><img src="images/icon-coffee.svg" alt="" style="width: 64px; height: 64px;"></div>
+            <div class="box razdel"><img src="images/icon-shop.svg" alt="" style="width: 64px; height: 64px;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="box box17"></div>
+        <div class="box box18"></div>
+      </div>
+
+      <div class="section">
+        <div class="box box17"></div>
+        <div class="row-vokzal">
+          <div class="box box19"></div>
+          <div class="box box20"></div>
+          <div class="box box19"></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="box box17"></div>
+        <div class="row-vokzal">
+          <div class="half-wrap">
+            <div class="box box21"></div>
+            <div class="box box22"></div>
+            <div class="colonne">
+              <div class="box box23"></div>
+              <div class="box box24"></div>
+            </div>
+            <div class="box box21"></div>
+          </div>
+          <div class="half-colonne">
+            <div class="box box25"></div>
+            <div class="box box21"></div>
+            <div class="box box25"></div>
+            <div class="box box26"></div>
+            <div class="box box17"></div>
+            <div class="box box21"></div>
+          </div>
+        </div>
       </div>
 
     </div>
