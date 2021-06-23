@@ -70,8 +70,8 @@ p {
 }
 button {
   font-family: 'Gotham Pro', sans-serif;
-  color: white;
   font-weight: normal;
+  color: white;
   font-size: 22px;
   cursor: pointer;
   background-color: #5159FF;
