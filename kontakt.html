@@ -8,6 +8,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style media="screen">
+      html {
+        -ms-overflow-style: none;
+        scrollbar-width: none; /* Firefox */
+      }
+      html::-webkit-scrollbar {
+        display: none;
+      }
       .myviewport-kontakt {
         height: 699px;
         width: 100%;
@@ -49,28 +56,31 @@
       <div class="navigation">
         <nav>
           <div class="menu">
-            <a href="index.html"><i class="icon-glav" id="logo"></i></a>
-            <a href="kontakt.html">Контакты</a>
-            <a href="voyage.html">Путешествовать</a>
-            <a href="ovokzale.html">О вокзале</a>
-            <a href="art.html">Искусство</a>
-            <a href="shop.html">Магазин</a>
+            <a href="index.html" class="nav-button"><i class="icon-glav" id="logo"></i></a>
+            <a href="kontakt.html" class="nav-button">Контакты</a>
+            <a href="voyage.html" class="nav-button">Путешествовать</a>
+            <a href="ovokzale.html" class="nav-button">О вокзале</a>
+            <a href="art.html" class="nav-button">Искусство</a>
+            <a href="shop.html" class="nav-button">Магазин</a>
           </div>
         </nav>
       </div>
       <div class="section-info">
         <div class="cards">
           <div class="row">
-            <div class="card1 card"><p>Адрес : улица Облаков  55</p></div>
-            <div class="box box7"></div>
+            <div class="card1 card"><p><span style="font-weight: 300;">Адрес : </span>улица Облаков  55</p></div>
+            <button type="button" name="button" class="box box7">
+              <a href="https://www.google.com/maps/place/Moscou/@55.5815243,36.825097,9z/data=!3m1!4b1!4m5!3m4!1s0x46b54afc73d4b0c9:0x3d44d6cc5757cf4c!8m2!3d55.755826!4d37.6172999">Смотреть на карте</a></button>
           </div>
-          <div class="row card"><p>Электронная почта : olabkovos@cloud.com</p></div>
-          <div class="row card"><p>Номер телефона: 8 999 777 6655</p></div>
-          <div class="row card"><p>Время работы : круглосуточно</p></div>
+          <div class="row card"><p><span style="font-weight: 300;">Электронная почта :</span> olabkovos@cloud.com</p></div>
+          <div class="row card"><p><span style="font-weight: 300;">Номер телефона :</span> 8 999 777 6655</p></div>
+          <div class="row card"><p><span style="font-weight: 300;">Время работы :</span> круглосуточно</p></div>
         </div>
       </div>
     </div>
     <div class="footer box">
+      <div style="display: flex; position: absolute; left: 2%; top: 33%;"><img src="images/copyright.png" alt="" style="">
+        OBLAKOVOS 2020-2021</div>
       <img src="images/iconsfooter.png" alt="" style="display: block; position: absolute; right: 2%; top: 33%; left: auto;">
     </div>
   </body>
