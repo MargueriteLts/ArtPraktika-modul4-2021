@@ -59,12 +59,12 @@
         <div class="navigation">
           <nav>
             <div class="menu">
-              <a href="index.html"><i class="icon-glav" id="logo"></i></a>
-              <a href="kontakt.html">Контакты</a>
-              <a href="voyage.html">Путешествовать</a>
-              <a href="ovokzale.html">О вокзале</a>
-              <a href="art.html">Искусство</a>
-              <a href="shop.html">Магазин</a>
+              <a href="index.html" class="nav-button"><i class="icon-glav" id="logo"></i></a>
+              <a href="kontakt.html" class="nav-button">Контакты</a>
+              <a href="voyage.html" class="nav-button">Путешествовать</a>
+              <a href="ovokzale.html" class="nav-button">О вокзале</a>
+              <a href="art.html" class="nav-button">Искусство</a>
+              <a href="shop.html" class="nav-button">Магазин</a>
             </div>
           </nav>
           </div>
@@ -72,7 +72,9 @@
             <img src="images/graphismglav1.png" alt="graphism" class="img1">
             <img src="images/gifoblakovos.gif" alt="" class="gifob">
           </div>
-          <div class="box box2"></div>
+          <div class="box box2 centered">
+            <img src="images/arrow-down.svg" alt="" style="height: 28px;">
+          </div>
       </div>
 
       <div class="section">
@@ -81,8 +83,8 @@
             <img src="images/raspisanie67px.png" alt=""
             style="height: 47px; margin-top: 35px; margin-left: 50px; background-position: 0 0; background-size: 100% auto; background-repeat: no-repeat;">
           </div>
-          <div class="box box4-a no-click">Отправления</div>
-          <div class="box-b box4-b cursor">Прибытия</div>
+          <div class="box box4-a no-click"><p>Отправления</p></div>
+          <div class="box-b box4-b cursor"><p>Прибытия</p></div>
         </div>
           <div class="box box5">
             <div class="smalbox"><p class="date">Дата</p></div>
@@ -132,42 +134,57 @@
         <div class="rond red" style="top: -30vh; left: 10vw;"></div>
         <div class="rond yel" style="top: -45vh; left: 85vw;"></div>
         <div class="rond yel" style="top: -5vh; left: -25vw;"></div>
-        <div class="rond blue" style="top: 10vh; left: 10vw;"></div>
+        <div class="rond blue" style="top: 10vh; left: 5vw;"></div>
         <div class="rond blue" style="top: 50vh; left: 70vw;"></div>
         <div class="rond red" style="top: 70vh; left: 7vw;"></div>
         <div class="cards">
           <div class="row">
-            <div class="card1 card"><p>Адрес : улица Облаков  55</p></div>
-            <button type="button" name="button" class="box box7">Смотреть на карте</button>
-            <!-- <div class="box box7"></div> -->
+            <div class="card1 card"><p><span style="font-weight: 300;">Адрес : </span>улица Облаков  55</p></div>
+            <button type="button" name="button" class="box box7">
+              <a href="https://www.google.com/maps/place/Moscou/@55.5815243,36.825097,9z/data=!3m1!4b1!4m5!3m4!1s0x46b54afc73d4b0c9:0x3d44d6cc5757cf4c!8m2!3d55.755826!4d37.6172999">Смотреть на карте</a></button>
           </div>
-          <div class="row card"><p>Электронная почта : olabkovos@cloud.com</p></div>
-          <div class="row card"><p>Номер телефона: 8 999 777 6655</p></div>
-          <div class="row card"><p>Время работы : круглосуточно</p></div>
+          <div class="row card"><p><span style="font-weight: 300;">Электронная почта :</span> olabkovos@cloud.com</p></div>
+          <div class="row card"><p><span style="font-weight: 300;">Номер телефона :</span> 8 999 777 6655</p></div>
+          <div class="row card"><p><span style="font-weight: 300;">Время работы :</span> круглосуточно</p></div>
         </div>
       </div>
 
       <div class="section-row">
         <div class="half">
-          <div class="box box8"></div>
+          <div class="box box8">
+            <img src="images/novosti67px.svg" alt="" style="height: 47px; margin-top: 35px; margin-left: 50px; background-position: 0 0; background-size: 100% auto; background-repeat: no-repeat;">
+          </div>
           <div class="box box9">
             <img src="images/opening.jpg" alt="" class="img1" style="border-radius: 10px;">
           </div>
           <div class="cadre">
-            <div class="box box10"></div>
-            <div class="box box10"></div>
+            <div class="box box10">
+              <img src="images/arrow-left.svg" alt="" style="height: 100%; width: 127px;">
+            </div>
+            <div class="box box10">
+              <img src="images/arrow-right.svg" alt="" style="height: 100%; width: 127px;">
+            </div>
           </div>
         </div>
         <div class="half">
-          <div class="box box8"></div>
-          <div class="box box9"></div>
-          <div class="box box8"></div>
+          <div class="box box8">
+            <p style="padding-left: 91px; padding-top: 55px;">Открытие станции: 5 октября 2020 года!</p>
+          </div>
+          <div class="box box9">
+            <p style="padding: 31px 50px 29px 91px;">В этот день «Облаковос» впервые распахнул свои двери для публики! Многие путешественники прибыли, чтобы стать свидетелями первого отправления совершенно новых облачных поездов, в то время как другие забрались внутрь, чтобы испытать свое первое путешествие из Облаковоса.<br>В этот первый день любой желающий мог войти на станцию, но для входа в поезда нужно было иметь билет, зарезервированный год назад. Хотя людей было много, все прошло гладко и радостно, никаких нарушений не было.<br>Хотя были сомнения в возможности реализации такого проекта, многие доверяли и сегодня вся команда Облаковос благодарит их за это.<br>Этот первый день был успешным и ознаменовал новую эру в области общественного транспорта.</p>
+          </div>
+          <button type="button" name="button" class="box box8">
+            <a href="ovokzale.html">Подробнее о вокзале</a>
+          </button>
+          <!-- <div class="box box8"></div> -->
         </div>
       </div>
 
     </div>
 
     <div class="footer box">
+      <div style="display: flex; position: absolute; left: 2%; top: 33%;"><img src="images/copyright.png" alt="" style="">
+        OBLAKOVOS 2020-2021</div>
       <img src="images/iconsfooter.png" alt="" style="display: block; position: absolute; right: 2%; top: 33%; left: auto;">
     </div>
 
