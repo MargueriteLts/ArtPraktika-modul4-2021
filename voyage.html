@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/style.css">
     <title>Путешествовать</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <style media="screen">
       .myviewport-voyage {
         height: 1334px;
@@ -32,9 +32,14 @@
         height: 95px;
         width: 100%;
       }
+      .pad {
+        padding-left: 52px;
+        padding-top: 22px;
+      }
       .box12{
         height: 64px;
         width: 100%;
+        padding: 22px 52px;
       }
       .box13{
         height: 159px;
@@ -42,24 +47,42 @@
       }
       .clouds {
         position: absolute;
-        display: flex;
-        flex-wrap: wrap;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        /* display: flex; */
+        /* flex-wrap: wrap; */
         top: 0;
         left: 0;
       }
-      .clouds2 {
+      .couche1 {
         position: absolute;
-        display: flex;
-        flex-wrap: wrap;
-        top: 130px;
-        left: 130px;
+        display: block;
+        top: -300px;
+        left: 30px;
+        height: 100%;
+        width: 100%;
       }
-      .clouds3 {
+      .couche2 {
         position: absolute;
-        display: flex;
-        flex-wrap: wrap;
-        top: 50px;
-        left: 240px;
+        display: block;
+        top: -400px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+      }
+      .test {
+        position: relative;
+        display: inline-block;
+        background-image: url(images/cloud.svg);
+        margin: -50px;
+        top:0px;
+        left:0px;
+        width: 300px;
+        height:240px;
+        background-position: 0 0;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
       }
     </style>
   </head>
@@ -71,22 +94,37 @@
         <div class="navigation">
           <nav>
             <div class="menu">
-              <a href="index.html"><i class="icon-glav" id="logo"></i></a>
-              <a href="kontakt.html">Контакты</a>
-              <a href="voyage.html">Путешествовать</a>
-              <a href="ovokzale.html">О вокзале</a>
-              <a href="art.html">Искусство</a>
-              <a href="shop.html">Магазин</a>
+              <a href="index.html" class="nav-button"><i class="icon-glav" id="logo"></i></a>
+              <a href="kontakt.html" class="nav-button">Контакты</a>
+              <a href="voyage.html" class="nav-button">Путешествовать</a>
+              <a href="ovokzale.html" class="nav-button">О вокзале</a>
+              <a href="art.html" class="nav-button">Искусство</a>
+              <a href="shop.html" class="nav-button">Магазин</a>
             </div>
           </nav>
         </div>
-        <div class="box box11"></div>
-        <div class="box box12"></div>
-        <div class="box box12"></div>
-        <div class="box box12"></div>
-        <div class="box box12"></div>
-        <div class="box box13"></div>
-        <div class="box box6"></div>
+        <div class="box box11">
+          <img src="images/voler67px.png" alt="" style="padding-left: 53px; padding-top: 19px; background-position: 0 0; background-size: 100% auto; background-repeat: no-repeat;">
+          <a href="https://margueritelts.github.io/ArtPraktika-modul3-2021/" class="plakat-inter">интерактивный веб-плакат о нас</a>
+        </div>
+        <div class="box box12">на Луну
+        <img src="images/plus.svg" alt="" style="position: absolute; right:52px; top: 18px;">
+        </div>
+        <div class="box box12 pad">на Северный полюс
+          <img src="images/plus.svg" alt="" style="position: absolute; right:52px; top: 18px;">
+        </div>
+        <div class="box box12 pad">в Париж
+          <img src="images/plus.svg" alt="" style="position: absolute; right:52px; top: 18px;">
+        </div>
+        <div class="box box12 pad">на Мальдивы
+          <img src="images/plus.svg" alt="" style="position: absolute; right:52px; top: 18px;">
+        </div>
+        <div class="box box13">
+          <img src="images/game67px.png" alt="" style="padding-left: 53px; padding-top: 11px; background-position: 0 0; background-size: 100% auto; background-repeat: no-repeat;">
+        </div>
+        <div class="box box6 centered">
+          <img src="images/mini-arrow-down.svg" alt="">
+        </div>
       </div>
       <div class="section-voyage s2">
         <div class="bg-grad h635">
@@ -94,53 +132,140 @@
         </div>
         <div class="affichage-on">
           <div class="clouds">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-          </div>
-          <div class="clouds2">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-          </div>
-          <div class="clouds3">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
-            <img src="images/cloud.svg" alt="">
+            <div class="couche1">
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+            </div>
+            <div class="couche2">
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+              <div class="test"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="footer box">
+      <div style="display: flex; position: absolute; left: 2%; top: 33%;"><img src="images/copyright.png" alt="" style="">
+        OBLAKOVOS 2020-2021</div>
       <img src="images/iconsfooter.png" alt="" style="display: block; position: absolute; right: 2%; top: 33%; left: auto;">
     </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    var mouse = {'x': 0, 'y': 0};
+
+    homex = 0;
+    homey = 0;
+    forcex = 0;
+    forcey = 0;
+    magnet = 500;
+
+
+    $(document).bind('mousemove', function(e) {
+      mouse = {'x': e.pageX, 'y': e.pageY};
+    });
+
+
+    $('.test').each(function(index, el){
+      $(el).data( "homex", parseInt($(el).position().left));
+      $(el).data( "homey", parseInt($(el).position().top));
+    });
+
+    $('.test').css('position','absolute');
+    setInterval(function () {
+      $('.test').each(function(index, el){
+        el = $(el);
+        position = el.position();
+        x0 = el.offset().left;
+        y0 = el.offset().top;
+        x1 = mouse.x;
+        y1 = mouse.y;
+        distancex = x1-x0;
+        distancey = y1-y0;
+
+        distance = Math.sqrt((distancex * distancex) + (distancey * distancey));
+
+        /*
+        magnet = 2600 - distance*20;
+        if(distance>130) {
+        magnet=0;
+      }
+      */
+
+      powerx = x0 - (distancex / distance) * magnet / distance;
+      powery = y0 - (distancey / distance) * magnet / distance;
+
+      forcex = (forcex + (el.data('homex') - x0) / 2) / 2.1;
+      forcey = (forcey + (el.data('homey') - y0) / 2) / 2.1;
+
+
+      el.css('left', powerx + forcex);
+      el.css('top',  powery + forcey);
+      el.text(parseInt( distance));
+    });
+    }, 15);
+
+    </script>
+
+
   </body>
 </html>
