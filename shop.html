@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Магазин</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <style media="screen">
       * {
-        margin: 0;
-        paddin: 0;
+        marging: 0;
+        padding: 0;
       }
       .myviewport-shop {
         height: 699px;
@@ -30,68 +31,20 @@
         left: 0;
         top: 95px;
         z-index: -10;
+        opacity: .7;
       }
       /* CLOUDS START */
       .section-shop {
         height: 445px;
         display: flex;
-        perspective: 1000px;
-        transform-style: preserve-3d;
+        justify-content: center;
+        align-items: center;
       }
-      .section-shop-inside {
+      /* .section-shop-inside {
         position: absolute;
         top: -10%;
         left: 40%;
-      }
-      #drag, #spin {
-        position: relative;
-        display: flex;
-        margin: auto;
-        transform-style: preserve-3d;
-        transform: rotateX(-10deg);
-      }
-      #drag img {
-        transform-style: preserve-3d;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 150%;
-        height: 150%;
-        /* line-height: 200px; */
-        text-align: center;
-        /* box-shadow: 0 0 8px #fff; */
-        /* -webkit-box-reflect: below 10px linear-gradient (transparent, transparent, #0005); */
-      }
-      /* #drag img:hover{
-        box-shadow: 0 0 15px #fffd;
-        -webkit-box-reflect: below 10px linear-gradient (transparent, transparent, #0007);
       } */
-      #ground {
-        width: 900px;
-        height: 900px;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotateX(90deg);
-      }
-
-      /* @keyframes spin {
-        from {
-          transform: rotateY(0deg);
-        }
-        to {
-          transform: rotateY(360deg);
-        }
-      }
-      @keyframes spinRevert {
-        from {
-          transform: rotateY(360deg);
-        }
-        to {
-          transform: rotateY(0deg);
-        }
-      } */
-      /* CLOUDS END */
 
       .section-row-shop {
         /* position: relative; */
@@ -103,13 +56,20 @@
       .box27 {
         height: 100%;
         width: 366px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        z-index: 100;
       }
       .box28 {
         height: 100%;
         flex: 1 182px;
+      }
+      .carousel {
+        transform: translateY(-130px);
+        height: 160%;
+        width: 100%;
+        perspective: 500px;
+      }
+      .carousel .carousel-item {
+        width: 600px;
       }
     </style>
   </head>
@@ -120,146 +80,62 @@
       <div class="navigation">
         <nav>
           <div class="menu">
-            <a href="index.html"><i class="icon-glav" id="logo"></i></a>
-            <a href="kontakt.html">Контакты</a>
-            <a href="voyage.html">Путешествовать</a>
-            <a href="ovokzale.html">О вокзале</a>
-            <a href="art.html">Искусство</a>
-            <a href="shop.html">Магазин</a>
+            <a href="index.html" class="nav-button"><i class="icon-glav" id="logo"></i></a>
+            <a href="kontakt.html" class="nav-button">Контакты</a>
+            <a href="voyage.html" class="nav-button">Путешествовать</a>
+            <a href="ovokzale.html" class="nav-button">О вокзале</a>
+            <a href="art.html" class="nav-button">Искусство</a>
+            <a href="shop.html" class="nav-button">Магазин</a>
           </div>
         </nav>
       </div>
-      <div class="bg-grad h445">
-        <img src="images/gradient.png" alt="" class="gradient">
-      </div>
+      <!-- <div class="bg-grad h445"><img src="images/gradient.png" alt="" class="gradient"></div> -->
       <div class="section-shop">
-        <div class="section-shop-inside">
-          <div id="drag">
-            <div id="spin">
-              <img src="images/cloud.svg" alt="">
-              <img src="images/cloud.svg" alt="">
-              <img src="images/cloud.svg" alt="">
-              <img src="images/cloud.svg" alt="">
-              <img src="images/cloud.svg" alt="">
-              <img src="images/cloud.svg" alt="">
-              <img src="images/cloud.svg" alt="">
+          <div class="carousel">
+            <div class="carousel-item">
+              <img src="images/merch4.png" alt="">
             </div>
-            <div id="ground"></div>
+            <div class="carousel-item">
+              <img src="images/merch5.png" alt="">
+            </div>
+            <div class="carousel-item">
+              <img src="images/merch6.png" alt="">
+            </div>
+            <div class="carousel-item">
+              <img src="images/merch1.png" alt="">
+            </div>
+            <div class="carousel-item">
+              <img src="images/merch2.png" alt="">
+            </div>
+            <div class="carousel-item">
+              <img src="images/merch3.png" alt="">
+            </div>
           </div>
-        </div>
+        <div class="bg-grad h445"><img src="images/gradient.png" alt="" class="gradient"></div>
       </div>
       <div class="section-row-shop">
-        <div class="box box27"><p>Количество :</p></div>
-        <div class="box box28"></div>
-        <div class="box box28"></div>
-        <div class="box box28"></div>
+        <div class="box box27 centered"><p>Количество :</p></div>
+        <button type="button" name="button" class="box box28 centered">+</button>
+        <div class="box box28 centered">0</div>
+        <button type="button" name="button" class="box box28 centered">-</button>
         <button type="button" name="button" class="box box27">Купить</button>
       </div>
 
     </div>
     <div class="footer box">
+      <div style="display: flex; position: absolute; left: 2%; top: 33%;"><img src="images/copyright.png" alt="" style="">
+        OBLAKOVOS 2020-2021</div>
       <img src="images/iconsfooter.png" alt="" style="display: block; position: absolute; right: 2%; top: 33%; left: auto;">
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-
-      var radius = 340;
-      var autoRotate = true;
-      var rotateSpeed = -60;
-      var imgWidth = 200;
-      var imgHeight = 300;
-
-      setTimeout(init, 50);
-
-      var odrag = document.getElementById('drag');
-      var ospin = document.getElementById('spin');
-      var aImg = ospin.getElementsByTagName('img')
-      ;
-
-      var aEle = [...aImg];
-
-      ospin.style.width = imgWidth + "px";
-      ospin.style.height = imgHeight + "px";
-
-      var ground = document.getElementById('ground');
-      ground.style.width = radius * 3 + "px";
-      ground.style.height = radius * 3 + "px";
-
-      function init(delayTime){
-        for (var i = 0; i < aEle.length; i++) {
-          aEle[i].style.transform = "rotateY(" + (i* (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
-          aEle[i].style.transition = "transform 1s";
-          aEle[i].style.transitionDelay = delayTime || (aEle.length-i) / 4 + "s";
-        }
-      }
-
-      function applyTransform(obj){
-        if(tY > 180) tY = 180;
-        if(tY < 0) tY = 0;
-
-        obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
-      }
-
-      function playSpin(yes) {
-        ospin.style.animationPlayState = (yes ? 'running' : 'paused');
-      }
-
-      var sX, sY, nX, desX = 0,
-      desY = 0,
-      tX = 0,
-      tY = 10;
-
-      if(autoRotate){
-        var animationName = (rotateSpeed>0 ? 'spin' : 'spinRevert');
-        ospin.style.animation = `$ {animationName} ${Math.abs(rotateSpeed)} s infinite linear`;
-      }
-
-      document.onpointerdown = function (e){
-        clearInterval(odrag.timer);
-        e = e || window.event;
-        var sX = e.clientX,
-            sY = e.clientY;
-
-
-      this.onpointermove = function (e){
-        e = e || window.event;
-        var nX = e.clientX,
-            nY = e.clientY;
-
-            desX = nX - sX;
-            desY = nY - sY;
-            tX += desX * 0.1;
-            tY += desY * 0.1;
-
-            applyTransform(odrag);
-
-            sX = nX;
-            sY = nY
-      };
-
-      this.onpointerup = function (e){
-        odrag.timer = setInterval(function (){
-          desX *= 0.95;
-          desY *= 0.95;
-          tX += desX * 0.1;
-          tY += desY * 0.1;
-
-          applyTransform(odrag);
-
-          playSpin(false);
-
-          if(Math.abs(desX) < 0.5 && Math.abs (desY) < 0.5){
-            clearInterval(odrag.timer);
-            playSpin(true);
-          }
-        }, 17);
-
-        this.onpointermove = this.onpointerup = null;
-      };
-
-      return false;
-    };
-
+    $(document).ready(function(){
+      $('.carousel').carousel();
+      $('.carousel').carousel({padding: -300});
+      $('.carousel').carousel({dist: -200});
+    });
     </script>
 
   </body>
