@@ -13,6 +13,13 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <style media="screen">
+    html {
+      -ms-overflow-style: none;
+      scrollbar-width: none; /* Firefox */
+    }
+    html::-webkit-scrollbar {
+      display: none;
+    }
       .myviewport-art {
         height: 699px;
         width: 100%;
@@ -32,21 +39,47 @@
         pointer-events: none;
         /* display: none; */
       }
-      .container {
+      .section-art {
         position: absolute;
-        /* height: 540px; */
-        height: 85%;
-        width: 100%;
         top: 95px;
         left: 0;
-      }
-      .slider {
-        top: 10px;
+        height: 85%;
         display: flex;
+        perspective: 1000px;
+        transform-style: preserve-3d;
       }
-      .plakat1 {
-        width: 343px;
+      .section-art-inside {
+        position: absolute;
+        top: -40%;
+        left: 470px;
       }
+      #drag, #spin {
+        position: relative;
+        display: flex;
+        margin: auto;
+        transform-style: preserve-3d;
+        transform: rotateX(-10deg);
+      }
+      #drag img {
+        transform-style: preserve-3d;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 170%;
+        height: 170%;
+        text-align: center;
+      }
+      #ground {
+        width: 900px;
+        height: 900px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateX(90deg);
+      }
+      /* .plakat1 {
+        width: 300px;
+      } */
     </style>
   </head>
 
@@ -56,76 +89,148 @@
       <div class="navigation">
         <nav>
           <div class="menu">
-            <a href="index.html"><i class="icon-glav" id="logo"></i></a>
-            <a href="kontakt.html">Контакты</a>
-            <a href="voyage.html">Путешествовать</a>
-            <a href="ovokzale.html">О вокзале</a>
-            <a href="art.html">Искусство</a>
-            <a href="shop.html">Магазин</a>
+            <a href="index.html" class="nav-button"><i class="icon-glav" id="logo"></i></a>
+            <a href="kontakt.html" class="nav-button">Контакты</a>
+            <a href="voyage.html" class="nav-button">Путешествовать</a>
+            <a href="ovokzale.html" class="nav-button">О вокзале</a>
+            <a href="art.html" class="nav-button">Искусство</a>
+            <a href="shop.html" class="nav-button">Магазин</a>
           </div>
         </nav>
       </div>
-      <!-- CAROUSEL START -->
       <img src="images/mask.png" alt="" class="mask">
-      <!-- CAROUSEL FINISH-->
-      <!-- <div class="box box0">
-        <img src="images/graphismart.png" alt="graphism" class="graph-art">
-      </div> -->
     </div>
-    <div class="container">
-      <div class="slider center">
-        <div><img src="images/plakat1.jpg" alt="" class="plakat1"></div>
-        <div><img src="images/plakat2.jpg" alt="" class="plakat1"></div>
-        <div><img src="images/plakat3.jpg" alt="" class="plakat1"></div>
-        <div><img src="images/plakat4.jpg" alt="" class="plakat1"></div>
-        <div><img src="images/plakat5.jpg" alt="" class="plakat1"></div>
-        <div><img src="images/plakat6.jpg" alt="" class="plakat1"></div>
-        <div><img src="images/plakat7.jpg" alt="" class="plakat1"></div>
-        <div><img src="images/plakat8.jpg" alt="" class="plakat1"></div>
-        <div><img src="images/plakat9.jpg" alt="" class="plakat1"></div>
-        <div><img src="images/plakat10.jpg" alt="" class="plakat1"></div>
-        <div><img src="images/plakat11.jpg" alt="" class="plakat1"></div>
-        <div><img src="images/plakat12.jpg" alt="" class="plakat1"></div>
+    <div class="section-art">
+      <div class="section-art-inside">
+        <div id="drag">
+          <div id="spin">
+            <img src="images/plakat1.jpg" alt="">
+            <img src="images/plakat2.jpg" alt="">
+            <img src="images/plakat3.jpg" alt="">
+            <img src="images/plakat4.jpg" alt="">
+            <img src="images/plakat5.jpg" alt="">
+            <img src="images/plakat6.jpg" alt="">
+            <img src="images/plakat7.jpg" alt="">
+            <img src="images/plakat8.jpg" alt="">
+            <img src="images/plakat9.jpg" alt="">
+            <img src="images/plakat10.jpg" alt="">
+            <img src="images/plakat11.jpg" alt="">
+            <img src="images/plakat12.jpg" alt="">
+          </div>
+          <div id="ground"></div>
+        </div>
       </div>
     </div>
     <div class="footer box">
+      <div style="display: flex; position: absolute; left: 2%; top: 33%;"><img src="images/copyright.png" alt="" style="">
+        OBLAKOVOS 2020-2021</div>
       <img src="images/iconsfooter.png" alt="" style="display: block; position: absolute; right: 2%; top: 33%; left: auto;">
     </div>
 
-    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/slick.min.js"></script>
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+
+<!-- Я нашла этот скрипт на YouTube, мне просто удалось заставить его работать здесь)))) -->
+  <script>
+
+    var radius = 700;
+    var autoRotate = true;
+    var rotateSpeed = -10;
+    var imgWidth = 200;
+    var imgHeight = 300;
+
+    setTimeout(init, 50);
+
+    var odrag = document.getElementById('drag');
+    var ospin = document.getElementById('spin');
+    var aImg = ospin.getElementsByTagName('img')
+    ;
+
+    var aEle = [...aImg];
+
+    ospin.style.width = imgWidth + "px";
+    ospin.style.height = imgHeight + "px";
+
+    var ground = document.getElementById('ground');
+    ground.style.width = radius * 3 + "px";
+    ground.style.height = radius * 3 + "px";
+
+    function init(delayTime){
+      for (var i = 0; i < aEle.length; i++) {
+        aEle[i].style.transform = "rotateY(" + (i* (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
+        aEle[i].style.transition = "transform 1s";
+        aEle[i].style.transitionDelay = delayTime || (aEle.length-i) / 4 + "s";
+      }
+    }
+
+    function applyTransform(obj){
+      if(tY > 180) tY = 180;
+      if(tY < 0) tY = 0;
+
+      obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
+    }
+
+    function playSpin(yes) {
+      ospin.style.animationPlayState = (yes ? 'running' : 'paused');
+    }
+
+    var sX, sY, nX, desX = 0,
+    desY = 0,
+    tX = 0,
+    tY = 10;
+
+    if(autoRotate){
+      var animationName = (rotateSpeed>0 ? 'spin' : 'spinRevert');
+      ospin.style.animation = `$ {animationName} ${Math.abs(rotateSpeed)} s infinite linear`;
+    }
+
+    document.onpointerdown = function (e){
+      clearInterval(odrag.timer);
+      e = e || window.event;
+      var sX = e.clientX,
+          sY = e.clientY;
 
 
-    <script type="text/javascript">
-      $('.center').slick({
-      centerMode: true,
-      centerPadding: '10px',
-      slidesToShow: 3,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: true,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            arrows: true,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-          }
+    this.onpointermove = function (e){
+      e = e || window.event;
+      var nX = e.clientX,
+          nY = e.clientY;
+
+          desX = nX - sX;
+          desY = nY - sY;
+          tX += desX * 0.1;
+          tY += desY * 0.1;
+
+          applyTransform(odrag);
+
+          sX = nX;
+          sY = nY
+    };
+
+    this.onpointerup = function (e){
+      odrag.timer = setInterval(function (){
+        desX *= 0.95;
+        desY *= 0.95;
+        tX += desX * 0.1;
+        tY += desY * 0.1;
+
+        applyTransform(odrag);
+
+        playSpin(false);
+
+        if(Math.abs(desX) < 0.5 && Math.abs (desY) < 0.5){
+          clearInterval(odrag.timer);
+          playSpin(true);
         }
-      ]
-    });
+      }, 17);
+
+      this.onpointermove = this.onpointerup = null;
+    };
+
+    return false;
+  };
+
   </script>
 
   </body>
