@@ -22,7 +22,6 @@
 
 body {
   background: white;
-  /* overflow: hidden; */
 }
 nav {
   display: block;
@@ -35,42 +34,18 @@ nav {
   width: 100%;
 }
 a {
-  font-size: 18px;
-  /* line-height: 1.47059;
-  font-weight: 400;
-  letter-spacing: -.022em; */
-  font-family: 'Gotham Pro', sans-serif;
-  font-weight: lighter;
-  color: white;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  flex: 1 183px;
-  border-radius: 10px;
-  background: rgba(81, 89, 255, 1);
-  border: 1px solid white;
-  cursor: pointer;
 }
-a:nth-of-type(1) {
-  flex: 2 366px;
-  /* width: 366px; */
-}
-a:hover {
-  color: rgba(81, 89, 255, 1);
-  background: white;
-  border: 2px solid rgba(81, 89, 255, 1);
-}
+
 p {
   font-family: 'Gotham Pro', sans-serif;
-  color: white;
-  font-weight: normal;
+  /* color: white; */
+  font-weight: 400;
   font-size: 20px;
 }
 button {
   font-family: 'Gotham Pro', sans-serif;
-  font-weight: normal;
+  font-weight: 300;
   color: white;
   font-size: 22px;
   cursor: pointer;
@@ -78,12 +53,24 @@ button {
   border: 1px solid white;
   border-radius: 10px;
 }
+button a {
+  color: white;
+}
 button:active {
   background-color: #4C53E7;
   transform: translateY(2px);
 }
-
-/* TOOLS */
+.plakat-anim, .plakat-inter {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  font-family: 'Gotham Pro', sans-serif;
+  font-weight: lighter;
+  color: white;
+  font-size: 10px;
+  text-decoration: underline;
+}
+/* TOOLS START*/
 .model {
   position: absolute;
   /* height: 100vh; */
@@ -109,7 +96,13 @@ button:active {
 .positionrel {
   position: relative;
 }
-/* TOOLS */
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* TOOLS END*/
+
 .pageglav {
   position: relative;
   display: flex;
@@ -117,6 +110,7 @@ button:active {
   /* height: 100%; */
   /* height: 1270px; */
   height: 2540px;
+  /* height: 400vh; */
   overflow: hidden;
 }
 .section {
@@ -144,6 +138,34 @@ button:active {
   flex-direction: row;
   height: 100%;
 }
+.nav-button {
+  font-size: 18px;
+  /* line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -.022em; */
+  font-family: 'Gotham Pro', sans-serif;
+  font-weight: lighter;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex: 1 183px;
+  border-radius: 10px;
+  background: rgba(81, 89, 255, 1);
+  border: 1px solid white;
+  cursor: pointer;
+}
+.nav-button:nth-of-type(1) {
+  flex: 2 366px;
+  /* width: 366px; */
+}
+.nav-button:hover {
+  color: rgba(81, 89, 255, 1);
+  background: white;
+  border: 2px solid rgba(81, 89, 255, 1);
+}
 .icon-glav {
   width: 281px;
   height: 72px;
@@ -156,8 +178,12 @@ button:active {
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
+
 #logo {
-  background-image: url('../images/logoblanc.png');
+  background-image: url("../images/logo-blanc.svg");
+}
+#logo:hover {
+  background-image: url("../images/logo-bleu.svg");
 }
 .no-click {
   pointer-events: none;
@@ -179,7 +205,7 @@ button:active {
   position: relative;
   display: inline-block;
   background: white;
-  border: 2px solid rgba(81, 89, 255, 1);
+  border: 1px solid rgba(81, 89, 255, 1);
   border-radius: 10px;
   color: rgba(81, 89, 255, 1);
   font-family: 'Gotham Pro', sans-serif;
@@ -212,21 +238,17 @@ button:active {
 .box3 {
   width: 60%;
   height: 127px;
-  /* padding: 10px; */
 }
-.box4-a {
+.box4-a, .box4-b {
   width: 20%;
   height: 127px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.box4-b {
-  width: 20%;
-  height: 127px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.box4-a p, .box4-b p {
+  font-weight: 300;
+  font-size: 24px;
 }
 .depart {
   height: 508px;
@@ -239,6 +261,7 @@ button:active {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-right: 20px;
 }
 .smalbox {
   height: 100%;
@@ -263,6 +286,17 @@ button:active {
   justify-content: space-around;
   align-items: center;
 }
+.box6 p {
+  font-weight: 300;
+  font-size: 20px;
+}
+.box6:hover {
+  background: white;
+  border: 2px solid rgba(81, 89, 255, 1);
+}
+.box6:hover p {
+  color: rgba(81, 89, 255, 1);
+}
 .s3 {
   /* top: 1270px; */
   height: 635px;
@@ -277,8 +311,8 @@ button:active {
   z-index: -1;
   display: block;
   position: absolute;
-  height: 88vh;
-  width: 88vh;
+  height: 600px;
+  width: 600px;
   border-radius: 50%;
 }
 .red {
@@ -315,6 +349,7 @@ button:active {
   padding-left: 40px;
   padding-top: 38px;
   backdrop-filter: blur(8px);
+  color: white;
 }
 .box7 {
   width: 34%;
@@ -334,6 +369,11 @@ button:active {
   width: 100%;
   height: 381px;
 }
+.box9 p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+}
 .cadre {
   display: flex;
   height: 127px;
@@ -341,12 +381,16 @@ button:active {
 .box10 {
   width: 50%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer {
   display: block;
   position: relative;
   width: 100%;
   height: 64px;
+  font-weight: 300;
 }
 .bg-grad {
   width: 100%;
