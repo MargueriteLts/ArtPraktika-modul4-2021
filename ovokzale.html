@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/style.css">
     <title>О вокзале</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <style media="screen">
       .myviewport-ovokzale {
         height: 2604px;
@@ -26,6 +26,7 @@
         height: 127px;
         display: flex;
         flex-direction: row;
+        z-index: 5;
       }
       .section-row-vokzal2 {
         position: relative;
@@ -34,16 +35,18 @@
         display: flex;
         flex-direction: row;
       }
-      .box14 {
+      /* .box14 {
         height: 100%;
         width: 183px;
         display: flex;
         align-items: center;
         justify-content: center;
-      }
+      } */
       .etaji {
         height: 100%;
-        width: 549px;
+        /* width: 549px; */
+        /* width: 50%; */
+        width: 731px;
         display: flex;
         flex-wrap: wrap;
       }
@@ -54,13 +57,24 @@
         align-items: center;
         justify-content: center;
       }
+      .etaj p {
+        font-weight: 300;
+      }
       .box15 {
         height: 100%;
+        /* width: 548px; */
+        /* width: 50%; */
         width: 548px;
       }
       .box16 {
         height: 100%;
         width: 731px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .plan {
+        cursor: move;
       }
       .razdeli {
         height: 100%;
@@ -73,6 +87,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+      }
+      .opisanie {
+        position: absolute;
+        justify-content: center;
+        bottom: 10px;
+        font-size: 20px;
+      }
+      .razdel-selected {
+        box-shadow: 0px 0px 8px 3px white;
+        z-index: 10;
       }
       .box17 {
         width: 100%;
@@ -82,6 +107,21 @@
         width: 100%;
         height: 508px;
       }
+      .box18 p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22px;
+      }
+      /* .plakat-anim, .plakat-inter {
+        position: absolute;
+        right: 30px;
+        bottom: 20px;
+        font-family: 'Gotham Pro', sans-serif;
+        font-weight: lighter;
+        color: white;
+        font-size: 10px;
+        text-decoration: underline;
+      } */
       .row-vokzal {
         width: 100%;
         height: 508px;
@@ -90,10 +130,16 @@
       .box19 {
         height: 100%;
         width: 183px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .box20 {
         height: 100%;
         width: 914px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       .half-wrap {
         position: relative;
@@ -112,16 +158,26 @@
       .colonne {
         display: flex;
         flex-direction: column;
-        width: 274px;
+        /* width: 274px; */
+        width: 43%;
         height: 318px;
       }
       .box23 {
         height: 30%;
         width: 100%;
+        padding-left: 36px;
+        padding-top: 39px;
       }
       .box24 {
         height: 70%;
         width: 100%;
+        padding-left: 36px;
+        padding-top: 39px;
+      }
+      .box24 p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
       }
       .half-colonne {
         display: flex;
@@ -131,13 +187,27 @@
       .box25 {
         height: 64px;
         width: 100%;
+        padding-left: 36px;
+        padding-top: 23px;
+        cursor: text;
       }
       .box26 {
         height: 63px;
         width: 100%;
+        padding-left: 36px;
+        padding-top: 23px;
+        cursor: text;
+      }
+      .smal-font {
+        font-size: 16px;
+        font-weight: 300;
+        color: #bbb;
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
+
     $(document).ready(function(){
 
       $("#etaj1").click(function(){
@@ -152,6 +222,47 @@
         }
       })
     });
+
+    // $(document).ready(function(){
+    //   $(".razdel").click(function(){
+    //     $(".razdel").toggleClass("razdel-selected");
+    //   })
+    // });
+
+    $(document).ready(function(){
+        $("#razdel1").click(function(){
+          $("#razdel1").toggleClass("razdel-selected");
+        })
+        $("#razdel2").click(function(){
+          $("#razdel2").toggleClass("razdel-selected");
+        })
+        $("#razdel3").click(function(){
+          $("#razdel3").toggleClass("razdel-selected");
+        })
+        $("#razdel4").click(function(){
+          $("#razdel4").toggleClass("razdel-selected");
+        })
+        $("#razdel5").click(function(){
+          $("#razdel5").toggleClass("razdel-selected");
+        })
+        $("#razdel6").click(function(){
+          $("#razdel6").toggleClass("razdel-selected");
+        })
+        $("#razdel7").click(function(){
+          $("#razdel7").toggleClass("razdel-selected");
+        })
+        $("#razdel8").click(function(){
+          $("#razdel8").toggleClass("razdel-selected");
+        })
+        $("#razdel9").click(function(){
+          $("#razdel9").toggleClass("razdel-selected");
+        })
+      });
+
+
+      $(function() {
+        $(".plan").draggable();
+      });
     </script>
   </head>
 
@@ -164,82 +275,116 @@
         <div class="navigation">
           <nav>
             <div class="menu">
-              <a href="index.html"><i class="icon-glav" id="logo"></i></a>
-              <a href="kontakt.html">Контакты</a>
-              <a href="voyage.html">Путешествовать</a>
-              <a href="ovokzale.html">О вокзале</a>
-              <a href="art.html">Искусство</a>
-              <a href="shop.html">Магазин</a>
+              <a href="index.html" class="nav-button"><i class="icon-glav" id="logo"></i></a>
+              <a href="kontakt.html" class="nav-button">Контакты</a>
+              <a href="voyage.html" class="nav-button">Путешествовать</a>
+              <a href="ovokzale.html" class="nav-button">О вокзале</a>
+              <a href="art.html" class="nav-button">Искусство</a>
+              <a href="shop.html" class="nav-button">Магазин</a>
             </div>
           </nav>
         </div>
         <div class="section-row-vokzal1">
-          <div class="box box14">Зал</div>
+          <!-- <div class="box box14">Зал</div> -->
           <div class="etaji">
-            <div class="box-b etaj" id="etaj1">1 этаж</div>
-            <div class="box-b etaj" id="etaj2">2 этаж</div>
-            <div class="box-b etaj" id="etaj3">3 этаж</div>
-            <div class="box-b etaj" id="etaj4">4 этаж</div>
-            <div class="box-b etaj" id="etaj5">5 этаж</div>
-            <div class="box-b etaj" id="etaj6">6 этаж</div>
+            <div class="box-b etaj" id="etaj1"><p>Зал</p></div>
+            <div class="box-b etaj" id="etaj2"><p>1 этаж</p></div>
+            <div class="box-b etaj" id="etaj3"><p>2 этаж</p></div>
+            <div class="box-b etaj" id="etaj4"><p>3 этаж</p></div>
+            <div class="box-b etaj" id="etaj5"><p>4 этаж</p></div>
+            <div class="box-b etaj" id="etaj6"><p>5 этаж</p></div>
           </div>
-          <div class="box box15"></div>
+          <div class="box box15">
+            <img src="images/razdeli67px.svg" alt="" style="padding-left: 43px; padding-top: 31px;">
+          </div>
         </div>
         <div class="section-row-vokzal2">
-          <div class="box box16"></div>
+          <div class="box box16">
+            <div class="plan">
+              <img src="images/plan-niv0.png" alt="" style="width: 150%; background-position: 0 0; background-size: 100% auto; background-repeat: no-repeat">
+            </div>
+          </div>
           <div class="razdeli">
-            <div class="box razdel"><img src="images/icon-entrance.svg" alt="" style="width: 64px; height: 64px;"></div>
-            <div class="box razdel"><img src="images/icon-exit.svg" alt="" style="width: 64px; height: 64px;"></div>
-            <div class="box razdel"><img src="images/icon-info.svg" alt="" style="width: 64px; height: 64px;"></div>
-            <div class="box razdel"><img src="images/icon-departs.svg" alt="" style="width: 64px; height: 64px;"></div>
-            <div class="box razdel"><img src="images/icon-arrivees.svg" alt="" style="width: 64px; height: 64px;"></div>
-            <div class="box razdel"><img src="images/icon-toilet.svg" alt="" style="width: 64px; height: 64px;"></div>
-            <div class="box razdel"><img src="images/icon-wait.svg" alt="" style="width: 64px; height: 64px;"></div>
-            <div class="box razdel"><img src="images/icon-coffee.svg" alt="" style="width: 64px; height: 64px;"></div>
-            <div class="box razdel"><img src="images/icon-shop.svg" alt="" style="width: 64px; height: 64px;"></div>
+            <button type="button" name="button" class="box razdel" id="razdel1"><span class="opisanie">Вход</span><img src="images/icon-entrance.svg" alt="" style="width: 50px; height: 50px;"></button>
+            <button type="button" name="button" class="box razdel" id="razdel2"><span class="opisanie">выход</span><img src="images/icon-exit.svg" alt="" style="width: 50px; height: 50px;"></button>
+            <button type="button" name="button" class="box razdel" id="razdel3"><span class="opisanie">Информация</span><img src="images/icon-info.svg" alt="" style="width: 50px; height: 50px;"></button>
+            <button type="button" name="button" class="box razdel" id="razdel4"><span class="opisanie">Отправления</span><img src="images/icon-departs.svg" alt="" style="width: 50px; height: 50px;"></button>
+            <button type="button" name="button" class="box razdel" id="razdel5"><span class="opisanie">Прибытие</span><img src="images/icon-arrivees.svg" alt="" style="width: 50px; height: 50px;"></button>
+            <button type="button" name="button" class="box razdel" id="razdel6"><span class="opisanie">туалеты</span><img src="images/icon-toilet.svg" alt="" style="width: 50px; height: 50px;"></button>
+            <button type="button" name="button" class="box razdel" id="razdel7"><span class="opisanie">зал ожидания</span><img src="images/icon-wait.svg" alt="" style="width: 50px; height: 50px;"></button>
+            <button type="button" name="button" class="box razdel" id="razdel8"><span class="opisanie">Кофе</span><img src="images/icon-coffee.svg" alt="" style="width: 50px; height: 50px;"></button>
+            <button type="button" name="button" class="box razdel" id="razdel9"><span class="opisanie">магазины</span><img src="images/icon-shop.svg" alt="" style="width: 50px; height: 50px;"></button>
           </div>
         </div>
       </div>
 
       <div class="section">
-        <div class="box box17"></div>
-        <div class="box box18"></div>
-      </div>
-
-      <div class="section">
-        <div class="box box17"></div>
-        <div class="row-vokzal">
-          <div class="box box19"></div>
-          <div class="box box20"></div>
-          <div class="box box19"></div>
+        <div class="box box17">
+          <img src="images/istoria67px.svg" alt="" style="padding-left: 46px; padding-top: 31px;">
+          <a href="https://margueritelts.github.io/test-Artpraktikamodul2/" class="plakat-anim">анимированный веб-плакат о нас</a>
+        </div>
+        <div class="box box18">
+          <p style="padding: 86px 183px 121px 183px;">Вы когда-нибудь мечтали полететь в небе, как птица? Независимо от вашего возраста, разве вы не смотр ите с тоской на облака? Эти белые вещи, мягко парящие в небе, кажутся свободными и такими мягкими, что хочется сесть на них и позволить ветру дуть, не так ли? Что ж, из аэровокзала Облаковос это возможно!<br>Действительно, этот совершенно новый вокзал и поезда были построены с использованием новейших технологий.<br>Теперь вы можете путешествовать на облачном поезде в любое место, куда захотите. Эти облачные поезда — самый приятный и экологически чистый вид транспорта. Путешествуя из Облаковоса, вы можете быть уверены, что не участвуете в загрязнении планеты, и можете совершить прекрасное путешествие, наблюдая за красивыми пейзажами, как если бы вы были настоящей птицей в небе.<br>Кроме того, Облкаковос построен таким образом, чтобы ваше путешествие прошло гладко. На этой станции вы избегаете шума и грязи, характерных для обычных станций. Все организовано так, чтобы ваше путешествие было максимально приятным. Так что не сомневайтесь, бронируйте билеты, и путешествие вашей мечты станет реальностью.
+          </p>
         </div>
       </div>
 
       <div class="section">
-        <div class="box box17"></div>
+        <div class="box box17">
+          <img src="images/zdanii67px.svg" alt="" style="padding-left: 46px; padding-top: 31px;">
+        </div>
+        <div class="row-vokzal">
+          <div class="box box19">
+            <img src="images/medium-arrow-left.svg" alt="">
+          </div>
+          <div class="box20">
+            <img src="images/parc.jpg" alt="" style="height: 100%;">
+          </div>
+          <div class="box box19">
+            <img src="images/medium-arrow-right.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="box box17">
+          <img src="images/otzivi67px.svg" alt="" style="padding-left: 46px; padding-top: 31px;">
+        </div>
         <div class="row-vokzal">
           <div class="half-wrap">
-            <div class="box box21"></div>
-            <div class="box box22"></div>
-            <div class="colonne">
-              <div class="box box23"></div>
-              <div class="box box24"></div>
+            <div class="box box21 centered">
+              <img src="images/small-arrow-top.svg" alt="">
             </div>
-            <div class="box box21"></div>
+            <div class="box22">
+              <img src="images/profil1.jpg" alt="" style="border-radius: 10px; position: relative; display: block; width: 100%; height: 100%;">
+            </div>
+            <div class="colonne">
+              <div class="box box23">Mария</div>
+              <div class="box box24"><p>У меня была отличная поездка, поезда потрясающие, а персонал очень дружелюбный!
+                <!-- <br><br><br><br>25.04.21 в 13:42 -->
+              </p></div>
+            </div>
+            <div class="box box21 centered">
+              <img src="images/small-arrow-bottom.svg" alt="">
+            </div>
           </div>
           <div class="half-colonne">
-            <div class="box box25"></div>
-            <div class="box box21"></div>
-            <div class="box box25"></div>
-            <div class="box box26"></div>
-            <div class="box box17"></div>
-            <div class="box box21"></div>
+            <div class="box box25">Напишите нам сообщение</div>
+            <div class="box box21" style="padding-left: 36px; padding-top: 37px; font-weight: 300;">
+              <img src="images/small-arrow-down.svg" alt="">
+              Выберите причину</div>
+            <div class="box-b box25 smal-font">Имя Фамилия</div>
+            <div class="box-b box26 smal-font">тема вашего сообщения</div>
+            <div class="box-b box17 smal-font" style="padding-left: 36px; padding-top: 23px; cursor: text;">сообщение</div>
+            <button type="button" name="button" class="box box21">Отправить</button>
           </div>
         </div>
       </div>
 
     </div>
     <div class="footer box">
+      <div style="display: flex; position: absolute; left: 2%; top: 33%;"><img src="images/copyright.png" alt="" style="">
+        OBLAKOVOS 2020-2021</div>
       <img src="images/iconsfooter.png" alt="" style="display: block; position: absolute; right: 2%; top: 33%; left: auto;">
     </div>
 
