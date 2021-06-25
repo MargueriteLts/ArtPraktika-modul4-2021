@@ -12,31 +12,90 @@
     <!-- <script src="javascripts/jquery-3.6.0.js"></script> -->
     <style media="screen">
       html,body{margin:0; padding:0;}
-      .box {
-        position:absolute;
+      body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: blue;
+      }
+      /* .box { */
         /* background: blue; */
-        background-image: url(images/cloud.svg);
         /* font-size:10px; */
         /* display:inline-block; */
-        display: flex;
-        flex-wrap: wrap;
-        margin:20px;
         /* border-radius: 50% ; */
-        width:250px;
-        height:180px;
         /* color:white; */
         /* text-align:center;
         line-height:20px; */
+      /* } */
+      /* OK */
+      /* .test {
+        position:absolute;
+        background-image: url(images/cloud.svg);
+        display: flex;
+        flex-wrap: wrap;
+        margin:20px;
+        width: 300px;
+        height:240px;
+        background-position: 0 0;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+      } */
+      .couche1 {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
       }
-      .box1 {
+      .couche2 {
+        position: absolute;
+        display: block;
+        top: 50px;
+        left: 70px;
+        height: 100%;
+        width: 100%;
+      }
+      .test {
+        position: relative;
+        display: inline-block;
+        background-image: url(images/cloud.svg);
+        /* display: flex;
+        flex-wrap: wrap; */
+        margin: -50px;
+        top:0px;
+        left:0px;
+        width: 300px;
+        height:240px;
+        background-position: 0 0;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+      }
+      /* .test{
+          position:relative;
+          background-image: url(images/cloud.svg);
+          background: blue;
+          font-size:10px;
+          top:40px;
+          left:40px;
+          display:inline-block;
+          margin:20px;
+          border-radius: 50% ;
+          width:40px;
+          height:40px;
+          color:white;
+          text-align:center;
+          line-height:20px;
+      } */
+      .test1 {
         top:40px;
         left:40px;
       }
-      .box2 {
+      .test2 {
         top:80px;
         left:80px;
       }
-      .box3 {
+      .test3 {
         top:150px;
         left:150px;
       }
@@ -44,46 +103,74 @@
   </head>
 
   <body>
-    <div class="box">1</div>
-<div class="box box1">X</div>
-<div class="box box2">X</div>
-<div class="box box3">X</div>
-<div class="box box4">X</div>
-<div class="box box5">X</div>
-<div class="box box6">X</div>
-<div class="box box7">X</div>
-<div class="box box8">X</div>
-<br>
-<div class="box">1</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<br>
-<div class="box">1</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<br>
-<div class="box">1</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<div class="box">X</div>
-<br>
+    <!-- <div class="box">1</div> -->
+<!-- <div class="test test1">X</div>
+<div class="test test2">X</div>
+<div class="test test3">X</div>
+<div class="test test4">X</div>
+<div class="test test5">X</div>
+<div class="test test6">X</div>
+<div class="test test7">X</div>
+<div class="test test8">X</div> -->
+<!-- <br> -->
+<div class="couche1">
+  <div class="test">1</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">1</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">1</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+</div>
+<div class="couche2">
+  <div class="test">1</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">1</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">1</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+  <div class="test">X</div>
+</div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-compat/3.0.0-alpha1/jquery.min.js"></script>
 
@@ -102,14 +189,14 @@ $(document).bind('mousemove', function(e) {
 });
 
 
-$('.box').each(function(index, el){
+$('.test').each(function(index, el){
   $(el).data( "homex", parseInt($(el).position().left));
   $(el).data( "homey", parseInt($(el).position().top));
 });
 
-$('.box').css('position','absolute');
+$('.test').css('position','absolute');
 setInterval(function () {
-  $('.box').each(function(index, el){
+  $('.test').each(function(index, el){
     el = $(el);
     position = el.position();
     x0 = el.offset().left;
